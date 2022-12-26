@@ -242,7 +242,7 @@ def _adjust_caption(fmt, table, value):
 
     else:  # Hard-code in the caption name and number/tag
         sep = {'none':'', 'colon':':', 'period':'.', 'space':' ',
-               'quad':u'\u2000', 'newline':'\n'}[separator]
+               'quad':u'\u2000', 'newline':'\n', 'endash':u'\u2013'}[separator]
 
         if isinstance(num, int):  # Numbered reference
             if fmt in ['html', 'html4', 'html5', 'epub', 'epub2', 'epub3']:
@@ -490,10 +490,10 @@ def process(meta):
             old_separator = separator
             separator = get_meta(meta, name)
             if separator not in \
-              ['none', 'colon', 'period', 'space', 'quad', 'newline']:
+              ['none', 'colon', 'period', 'space', 'quad', 'newline', 'endash']:
                 msg = textwrap.dedent("""
                           pandoc-tablenos: caption separator must be one of
-                          none, colon, period, space, quad, or newline.
+                          none, colon, period, space, quad, endash or newline.
                       """ % name)
                 STDERR.write(msg)
                 continue

@@ -191,7 +191,7 @@ Pandoc-tablenos may be customized by setting variables in the [metadata block] o
   * `tablenos-caption-separator` or `xnos-caption-separator` - Sets 
     the caption separator (e.g., the colon in "Table 1:") to
     something else.  It must be one of `none`, `colon`,
-    `period`, `space`, `quad`, or `newline`; and
+    `period`, `space`, `quad`, `endash` or `newline`; and
 
   * `tablenos-number-by-section` or `xnos-number-by-section` - Set to
     `True` to number tables by section (i.e. Table 1.1, 1.2, etc in
